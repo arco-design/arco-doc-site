@@ -21,7 +21,7 @@ function VersionV2({ lang = 'zh-CN' }) {
   const title = t.changelog;
   const description = t.description;
   /** __in_submodule__
-   const VersionContent = lazyLoad(() => import(`./../../../docs/version_v2.${lang}.md`));
+   const VersionContent = lazyLoad(() => import(`../../../../docs/version_v2.${lang}.md`));
   */
   return (
     <div className="markdown-body">

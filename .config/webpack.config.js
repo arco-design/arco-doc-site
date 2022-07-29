@@ -45,10 +45,7 @@ exports.site = (config, env) => {
     })
   );
   if (isSubModule) {
-    config.resolve.alias['@arco-design/web-react'] = path.resolve(
-      __dirname,
-      '..'
-    );
+    config.resolve.alias['@arco-design/web-react'] = path.resolve(__dirname, '../../..');
     config.module.rules.push({
       test: /\.js$/,
       include: path.resolve(__dirname, '../src'),
@@ -58,6 +55,7 @@ exports.site = (config, env) => {
         },
       ],
     });
+    config.resolve.modules = [path.resolve(__dirname, '../node_modules'), 'node_modules'];
   }
 
   if (env === 'dev') {

@@ -3,7 +3,7 @@ import ClipboardJS from 'clipboard';
 import { Message, Tag } from '@arco-design/web-react';
 import { Helmet } from 'react-helmet';
 /** __in_submodule__
-import IconDemo from '../../../../icon/demo';
+import IconDemo from '../../../../../icon/demo';
 */
 import FooterEN from './md/footer.en-US.md';
 import FooterZH from './md/footer.zh-CN.md';
@@ -28,8 +28,7 @@ const locale = {
     component: 'Component',
     general: 'General',
     card_title: 'IconBox',
-    card_description:
-      'You can upload and choose more icons on the IconBox platform.',
+    card_description: 'You can upload and choose more icons on the IconBox platform.',
     card_goto: 'Goto',
   },
 };
@@ -77,8 +76,7 @@ function PageIcon({ lang = 'zh-CN' }) {
       <div className="markdown-body">
         <div className="ac-nav-intro">
           <p>
-            {t.component} <span className="separator">/</span>{' '}
-            <strong>{t.general}</strong>
+            {t.component} <span className="separator">/</span> <strong>{t.general}</strong>
           </p>
           <h1>{title}</h1>
           <p>{description}</p>
