@@ -6,7 +6,12 @@
   white-space: nowrap;
 
   &-color-line {
-    background: linear-gradient(92.06deg, #33c2ff -17.9%, #257cff 43.39%, #165dff 99.4%);
+    background: linear-gradient(
+      92.06deg,
+      #33c2ff -17.9%,
+      #257cff 43.39%,
+      #165dff 99.4%
+    );
     background-clip: text;
     /* stylelint-disable-next-line */
     -webkit-background-clip: text;
@@ -54,41 +59,6 @@
     &:first-child {
       margin-right: 10px;
     }
-  }
-}
-
-.links {
-  margin-top: 24px;
-  display: flex;
-  align-items: center;
-  width: 130%;
-
-  &-item {
-    padding-right: 8px;
-
-    &:last-child {
-      padding-right: 0;
-    }
-  }
-}
-
-.link {
-  height: 22px;
-  line-height: 22px;
-  display: flex;
-  align-items: center;
-
-  &-icon {
-    margin-right: 4px;
-    line-height: 1;
-
-    svg {
-      vertical-align: top;
-    }
-  }
-
-  &-text {
-    color: var(--color-text-1);
   }
 }
 
@@ -154,11 +124,6 @@ body[arco-theme='dark'] {
     }
   }
 
-  .links {
-    margin-top: 16px;
-    justify-content: center;
-  }
-
   // for i18n
   :global(.home-arco-lang) {
     .slogan {
@@ -168,6 +133,25 @@ body[arco-theme='dark'] {
 
     .description {
       display: none;
+    }
+  }
+}
+
+// for rtl
+:global(html.rtl) {
+  .operations {
+    &-item {
+      &:first-child {
+        margin-left: 10px;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .description {
+    &-prefix {
+      margin-left: 8px;
+      margin-right: 0;
     }
   }
 }

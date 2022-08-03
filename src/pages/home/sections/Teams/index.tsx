@@ -1,5 +1,5 @@
 import React, { useEffect, useState, CSSProperties } from 'react';
-import { Divider, Button, Carousel } from '@arco-design/web-react';
+import { Divider, Button, Carousel, Space } from '@arco-design/web-react';
 import { IconClose } from '@arco-design/web-react/icon';
 import { teaLog } from '@arco-materials/site-utils';
 import LogoArco from '../../assets/logo_ArcoDesign.svg';
@@ -17,7 +17,8 @@ const reviews = [
   {
     name: 'YangYu',
     position: '前端开发',
-    content: 'Arco 的`文档`写得挺清晰的，还有问题响应速度和 API 会让我用的比较舒服。',
+    content:
+      'Arco 的`文档`写得挺清晰的，还有问题响应速度和 API 会让我用的比较舒服。',
   },
   {
     name: 'MuXin',
@@ -50,7 +51,8 @@ const reviews = [
   {
     name: 'JiaAn',
     position: '产品经理',
-    content: '和设计师`沟通更顺畅`，避免了很多视觉细节需要去频繁的跟设计师去讨论。',
+    content:
+      '和设计师`沟通更顺畅`，避免了很多视觉细节需要去频繁的跟设计师去讨论。',
   },
   {
     name: 'WenTong',
@@ -61,7 +63,8 @@ const reviews = [
   {
     name: 'YangYu',
     position: '前端开发',
-    content: 'Arco 的`文档`写得挺清晰的，还有问题响应速度和 API 会让我用的比较舒服。',
+    content:
+      'Arco 的`文档`写得挺清晰的，还有问题响应速度和 API 会让我用的比较舒服。',
   },
   {
     name: 'MuXin',
@@ -126,7 +129,9 @@ export default function Teams() {
         />
         <div className={styles['teams-review-box-info']}>
           <span className={styles['teams-review-box-name']}>@{data.name}</span>
-          <span className={styles['teams-review-box-position']}>{data.position}</span>
+          <span className={styles['teams-review-box-position']}>
+            {data.position}
+          </span>
         </div>
       </div>
     );
@@ -143,7 +148,9 @@ export default function Teams() {
           }}
         >
           {reviews.map((item, index) => (
-            <div key={index}>{renderReviewBox(item, index, { width: '80%' })}</div>
+            <div key={index}>
+              {renderReviewBox(item, index, { width: '80%' })}
+            </div>
           ))}
         </Carousel>
       );
@@ -161,7 +168,10 @@ export default function Teams() {
   };
 
   return (
-    <div className={styles['section-wrapper']} data-tracker-name={locale['teams.slogan']}>
+    <div
+      className={styles['section-wrapper']}
+      data-tracker-name={locale['teams.slogan']}
+    >
       <div className={styles['section-content']}>
         <div className={styles['teams-body-left']}>
           <div className={styles['teams-logo']}>
@@ -170,7 +180,10 @@ export default function Teams() {
             <div className={styles['teams-logo-teams']}>
               <ul
                 className={styles['teams-logo-list']}
-                style={{ top: logoOffset, transition: isAnimate ? 'top ease-out 300ms' : 'none' }}
+                style={{
+                  top: logoOffset,
+                  transition: isAnimate ? 'top ease-out 300ms' : 'none',
+                }}
                 onTransitionEnd={handleTransitionEnd}
               >
                 {logoList.concat(logoList[0]).map((item, index) => {
@@ -188,27 +201,41 @@ export default function Teams() {
           <div className={styles['teams-count']}>
             <div className={styles['teams-count-item']}>
               <div className={styles['teams-count-number']}>4,000+</div>
-              <div className={styles['teams-count-name']}>{locale['teams.projects']}</div>
+              <div className={styles['teams-count-name']}>
+                {locale['teams.projects']}
+              </div>
             </div>
-            <Divider type="vertical" className={styles['teams-count-divider']} />
+            <Divider
+              type="vertical"
+              className={styles['teams-count-divider']}
+            />
             <div className={styles['teams-count-item']}>
               <div className={styles['teams-count-number']}>210 W+</div>
-              <div className={styles['teams-count-name']}>{locale['teams.download']}</div>
+              <div className={styles['teams-count-name']}>
+                {locale['teams.download']}
+              </div>
             </div>
           </div>
-          <div className={styles['teams-bottom']}>
-            <StartBtn className={styles['teams-bottom-btn']} reportTea={reportTea} />
+          <Space className={styles['teams-bottom']} size={12}>
+            <StartBtn
+              className={styles['teams-bottom-btn']}
+              reportTea={reportTea}
+            />
             <Button
               className={`home-btn ${styles['teams-bottom-btn']}`}
               type="secondary"
               href={linkShowCase}
               onClick={() => {
-                reportTea({ name: locale['banner.showcase'], link: linkShowCase, target: '_self' });
+                reportTea({
+                  name: locale['banner.showcase'],
+                  link: linkShowCase,
+                  target: '_self',
+                });
               }}
             >
               {locale['teams.showcase']}
             </Button>
-          </div>
+          </Space>
         </div>
         <div className={styles['teams-body-right']}>{renderReviewList()}</div>
       </div>

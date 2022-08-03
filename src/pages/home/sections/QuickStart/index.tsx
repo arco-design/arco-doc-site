@@ -22,10 +22,10 @@ export default function QuickStart() {
 
   const renderDesignContent = () => {
     return (
-      <div
+      <a
+        href={linkFigmaArcoComponent}
         className={styles['design-terminal']}
         onClick={() => {
-          window.open(linkFigmaArcoComponent);
           teaLog(EventMap.clickQuickStartBtn, {
             link: linkFigmaArcoComponent,
             name: `Figma ${locale['quickStart.block.design.componentResource.title']}`,
@@ -40,7 +40,7 @@ export default function QuickStart() {
         <span className={styles['design-terminal-content']}>
           {locale['quickStart.block.design.componentResource.title']}
         </span>
-      </div>
+      </a>
     );
   };
 
@@ -85,7 +85,12 @@ export default function QuickStart() {
             })}
             key={title}
           >
-            <LogoWrapper className={styles['card-icon']} icon={icon} size="medium" theme />
+            <LogoWrapper
+              className={styles['card-icon']}
+              icon={icon}
+              size="medium"
+              theme
+            />
             <div className={styles['card-title']}>{title}</div>
             <div className={styles['card-desc']}>{description}</div>
             <div className={styles['card-content']}>{content}</div>
