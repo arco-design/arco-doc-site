@@ -75,7 +75,7 @@ function Index() {
 if (isProduction) {
   registerServiceWorker({
     content:
-      'A new version is available, refresh page to get the latest version？',
+      'New doc content is available, refresh page to get the latest version？',
     okText: 'Ok',
     cancelText: 'Cancel',
   });
