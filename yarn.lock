@@ -324,10 +324,29 @@
   dependencies:
     color "^3.1.3"
 
-"@arco-design/web-react@^2.37.0", "@arco-design/web-react@^2.37.2":
+"@arco-design/web-react@2.38.0":
   version "2.38.0"
   resolved "https://registry.npmjs.org/@arco-design/web-react/-/web-react-2.38.0.tgz#5a753217cfb449cc2632b631c9b9c3504d145533"
   integrity sha512-4ZFCBfwZUlvByR9JDAjOXnIFLXnzKnyDOlmPKGO0fABccbUQ3Sgl6Os4NKCYhCMHbdcFRZgyZa7PDU/CY7Bs0Q==
+  dependencies:
+    "@arco-design/color" "^0.4.0"
+    "@babel/runtime" "^7.5.5"
+    b-tween "^0.3.3"
+    b-validate "^1.4.0"
+    compute-scroll-into-view "^1.0.17"
+    dayjs "^1.10.5"
+    lodash "^4.17.21"
+    number-precision "^1.3.1"
+    react-focus-lock "^2.2.1"
+    react-transition-group "^4.3.0"
+    resize-observer-polyfill "^1.5.1"
+    scroll-into-view-if-needed "2.2.20"
+    shallowequal "^1.1.0"
+
+"@arco-design/web-react@^2.38.1":
+  version "2.38.1"
+  resolved "https://registry.npmjs.org/@arco-design/web-react/-/web-react-2.38.1.tgz#facc7688f3e25c1f779d35c51ab463676b92ddcb"
+  integrity sha512-uOePl7RS4j/fm2xgq32aCz1ARRxvvh3+rvQOQfOtjkj0j2R53fM0N8kfFpvT7sdkGNiExmyH1+IyFsC5N2W02g==
   dependencies:
     "@arco-design/color" "^0.4.0"
     "@babel/runtime" "^7.5.5"
@@ -350,13 +369,13 @@
   dependencies:
     classnames "^2.2.6"
 
-"@arco-materials/site-navbar@^1.5.1":
-  version "1.5.1"
-  resolved "https://registry.npmjs.org/@arco-materials/site-navbar/-/site-navbar-1.5.1.tgz#1aa4074ebdd975b32ecd51e4daeb3c4657bfe3ad"
-  integrity sha512-1SUT84BC5RUjd6PkOsx1p42Ye7/6ERR3LMqk4zd8GdyysEz+/ZvXIEvZ3Y+iqCH5k2GizXAqXJa/v5svAQxPgA==
+"@arco-materials/site-navbar@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.npmjs.org/@arco-materials/site-navbar/-/site-navbar-1.6.0.tgz#927de4808f416ce29eb16584c9d79a7c243494ba"
+  integrity sha512-SDqZOhHkFsGFKcxzJo0RO5p3RaxdiR2W/74gOCH93FtKFSlHyghythq0xlG/Qza8jXIiXVoxZcxSkjEP3EQ6xg==
   dependencies:
     "@antv/g2" "^4.1.12"
-    "@arco-design/web-react" "^2.37.0"
+    "@arco-design/web-react" "^2.38.1"
     "@arco-materials/site-utils" "^1.2.0"
     "@docsearch/react" "^3.0.0-alpha.42"
     animejs "^3.2.1"

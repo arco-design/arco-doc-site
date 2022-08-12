@@ -126,6 +126,8 @@ function ACMenu(props) {
                                       item.path,
                                       lang
                                     )}
+                                    // Menuitem and Link will repeat TAB
+                                    tabIndex={-1}
                                     onClick={onClickPrevent}
                                   >
                                     {item.new ? (
@@ -154,6 +156,7 @@ function ACMenu(props) {
                             <a
                               href={getPath(group.module, child.path, lang)}
                               onClick={onClickPrevent}
+                              tabIndex={-1}
                             >
                               {child.new ? (
                                 <Badge
@@ -179,6 +182,7 @@ function ACMenu(props) {
                   <a
                     href={getPath(group.module, child.path, lang)}
                     onClick={onClickPrevent}
+                    tabIndex={-1}
                   >
                     {group.new ? (
                       <Badge style={{ display: 'inline' }} count={1} dot>
